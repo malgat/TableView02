@@ -8,6 +8,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
         myTableView.dataSource = self
         myTableView.delegate = self
+    //NavigationBar에 title 추가 => self.title = "동물농장"
     }
     
     //UITableView DataSource Method
@@ -22,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.textLabel?.text = animals[row]
         cell.detailTextLabel?.text = korean[row]
-        
+        cell.imageView?.image = UIImage(named: animals[row])
         return cell
     }
     //섹션 두개 만들기
